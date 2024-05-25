@@ -8,6 +8,6 @@ describe('App', () => {
 
     it('should render title', () => {
         render(<App />);
-        screen.getByText('Vite + React');
+        screen.getByText('Wakeup Labs Challenge');
     });
 });
