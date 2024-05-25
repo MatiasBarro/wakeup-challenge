@@ -1,20 +1,16 @@
-import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
+import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import NavigationBar from '@/components/common/NavigationBar';
+import { Home } from 'lucide-react';
 
 export const Route = createRootRoute({
     component: () => (
-        <>
-            <div className="p-2 flex gap-2">
-                <Link to="/" className="[&.active]:font-bold">
-                    Home
-                </Link>{' '}
-                <Link to="/about" className="[&.active]:font-bold">
-                    About
-                </Link>
+        <div className="w-full min-h-screen">
+            <NavigationBar />
+            <div className="container mx-auto p-4">
+                <Outlet />
             </div>
-            <hr />
-            <Outlet />
             <TanStackRouterDevtools />
-        </>
+        </div>
     ),
 });
