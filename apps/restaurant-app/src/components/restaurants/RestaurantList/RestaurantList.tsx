@@ -1,5 +1,5 @@
 import { Restaurant } from 'restaurant-types';
-import RestaurantItem from '../RestaurantItem';
+import { RestaurantItem } from './RestaurantItem';
 
 type RestaurantListProps = {
     restaurants: Restaurant[];
