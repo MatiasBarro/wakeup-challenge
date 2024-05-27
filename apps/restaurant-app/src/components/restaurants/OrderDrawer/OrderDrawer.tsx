@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+import { Product } from 'restaurant-types';
 import { Button } from '@/components/ui/button';
 import {
     Drawer,
@@ -9,33 +11,41 @@ import {
     DrawerTrigger,
 } from '@/components/ui/drawer';
 import { cn } from '@/lib/utils';
-import { useMemo } from 'react';
-import { Product } from 'restaurant-types';
-
-export type OrderItem = { itemId: string; quantity: number };
+import { useOrderStore } from '@/stores/useOrderStore';
 
 type OrderDrawerProps = {
     products: Record<string, Product>;
-    order: OrderItem[];
 };
 
-export function OrderDrawer({ products, order }: OrderDrawerProps) {
-    const orderItems = useMemo(() => {
-        return order.map((orderItem) => {
-            const { name, price } = products[orderItem.itemId] ?? {
-                name: 'unknown',
-                price: 0,
-            };
-            return {
-                ...orderItem,
-                name,
-                price: orderItem.quantity * price,
-            };
-        });
-    }, [order, products]);
+type OrderItem = {
+    itemId: string;
+    name: string;
+    price: number;
+    quantity: number;
+};
+
+export function OrderDrawer({ products }: OrderDrawerProps) {
+    const order = useOrderStore((state) => state.order);
+    const orderItems: OrderItem[] = useMemo(
+        () =>
+            Object.entries(order).map((item) => {
+                const [itemId, quantity] = item;
+                const { name, price } = products[itemId];
+                return {
+                    itemId,
+                    name,
+                    price,
+                    quantity,
+                };
+            }),
+        [order],
+    );
 
     const total = useMemo(() => {
-        return orderItems.reduce((total, item) => (total += item.price), 0);
+        return orderItems.reduce(
+            (total, item) => (total += item.quantity * item.price),
+            0,
+        );
     }, [orderItems]);
 
     return (
@@ -68,8 +78,9 @@ export function OrderDrawer({ products, order }: OrderDrawerProps) {
                             </div>
                         ))}
                     </div>
-                    <span className="flex flex-row pt-2 border-t-2 justify-end">
-                        Total: ${total.toFixed(2)}{' '}
+                    <hr className="my-4" />
+                    <span className="font-bold self-end">
+                        Total: ${total.toFixed(2)}
                     </span>
                 </div>
                 <DrawerFooter className="pt-2">

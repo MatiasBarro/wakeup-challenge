@@ -5,10 +5,19 @@ import { Product } from 'restaurant-types';
 
 export type ProductItemProps = {
     product: Product;
+    orderQuantity: number;
+    addItemToOrder: () => void;
+    removeItemFromOrder: () => void;
     className?: string;
 };
 
-export function ProductItem({ product, className }: ProductItemProps) {
+export function ProductItem({
+    product,
+    orderQuantity = 0,
+    addItemToOrder,
+    removeItemFromOrder,
+    className,
+}: ProductItemProps) {
     return (
         <div
             className={cn(
@@ -21,11 +30,15 @@ export function ProductItem({ product, className }: ProductItemProps) {
                 <span className="text-lg">${product.price.toFixed(2)}</span>
             </div>
             <div className="flex w-full justify-end items-center gap-4">
-                <Button size="icon" disabled>
+                <Button
+                    size="icon"
+                    disabled={orderQuantity === 0}
+                    onClick={removeItemFromOrder}
+                >
                     <Minus />
                 </Button>
-                <span className="text-lg">0</span>
-                <Button size="icon">
+                <span className="text-lg">{orderQuantity}</span>
+                <Button size="icon" onClick={addItemToOrder}>
                     <Plus />
                 </Button>
             </div>
