@@ -1,6 +1,12 @@
-import { Controller, Get, Query } from '@nestjs/common';
+import {
+    BadRequestException,
+    Controller,
+    Get,
+    Param,
+    Query,
+} from '@nestjs/common';
 import { RestaurantsService } from './restaurants.service';
-import { Restaurant } from 'restaurant-types';
+import { Product, Restaurant } from 'restaurant-types';
 
 @Controller('restaurants')
 export class RestaurantsController {
@@ -12,5 +18,18 @@ export class RestaurantsController {
         @Query('pageSize') pageSize = 10,
     ): Restaurant[] {
         return this.restaurantsService.findAll({ page, pageSize });
+    }
+
+    @Get('/:restaurantId/products')
+    findRestaurantProducts(
+        @Param('restaurantId') restaurantId: string,
+        @Query('page') page = 1,
+        @Query('pageSize') pageSize = 10,
+    ): Product[] {
+        return this.restaurantsService.findRestaurantProducts({
+            restaurantId,
+            page,
+            pageSize,
+        });
     }
 }

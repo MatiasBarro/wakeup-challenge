@@ -35,8 +35,22 @@ describe('AppController (e2e)', () => {
     });
 
     describe('/restaurants', () => {
-        it('GET returns an array of restaurants', () => {
+        it('GET returns 200', () => {
             return request(app.getHttpServer()).get('/restaurants').expect(200);
+        });
+    });
+
+    describe('/restaurants/:restaurantId/products', () => {
+        it('GET returns 200', () => {
+            return request(app.getHttpServer())
+                .get('/restaurants/1/products')
+                .expect(200);
+        });
+
+        it('GET returns 404 when restaurant does not exists', () => {
+            return request(app.getHttpServer())
+                .get('/restaurants/100/products')
+                .expect(404);
         });
     });
 });

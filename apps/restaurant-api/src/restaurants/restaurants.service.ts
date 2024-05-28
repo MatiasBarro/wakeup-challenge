@@ -1,6 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import RestaurantEntity from '@/data/entities/restaurant.entity';
-import { Restaurant } from 'restaurant-types';
+import { Product, Restaurant } from 'restaurant-types';
 import { paginator } from '@/utils/paginator/paginator';
 
 @Injectable()
@@ -24,5 +24,23 @@ export class RestaurantsService {
             page,
             pageSize,
         );
+    }
+
+    findRestaurantProducts({
+        restaurantId,
+        page,
+        pageSize,
+    }: {
+        restaurantId: string;
+        page: number;
+        pageSize: number;
+    }): Product[] {
+        const restaurant = this.restaurantData.get(restaurantId);
+
+        if (!restaurant) {
+            throw new NotFoundException(`Restaurant#${restaurantId} not found`);
+        }
+
+        return paginator(restaurant.products, page, pageSize);
     }
 }
