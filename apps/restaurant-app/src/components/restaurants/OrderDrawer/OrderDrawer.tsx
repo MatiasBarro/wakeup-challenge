@@ -26,6 +26,7 @@ type OrderItem = {
 
 export function OrderDrawer({ products }: OrderDrawerProps) {
     const order = useOrderStore((state) => state.order);
+    console.log('order', order);
     const orderItems: OrderItem[] = useMemo(
         () =>
             Object.entries(order).map((item) => {
