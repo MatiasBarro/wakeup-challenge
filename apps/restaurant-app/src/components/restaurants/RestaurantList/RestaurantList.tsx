@@ -12,6 +12,7 @@ export function RestaurantList({ restaurants }: RestaurantListProps) {
         <div className="flex flex-wrap gap-y-8 justify-between">
             {restaurants.map((restaurant) => (
                 <RestaurantItem
+                    key={restaurant.id}
                     restaurant={restaurant}
                     className="w-full lg:w-[calc(50%-1rem)]"
                     onClick={() =>
