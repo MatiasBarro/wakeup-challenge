@@ -11,7 +11,6 @@ export const useOrderStore = create<OrderState>((set) => ({
     order: {},
     addItemToOrder: (itemId: string) =>
         set((state) => {
-            console.log('Adding item to order', itemId);
             return {
                 order: {
                     ...state.order,
@@ -22,7 +21,7 @@ export const useOrderStore = create<OrderState>((set) => ({
     removeItemFromOrder: (itemId: string) =>
         set((state) => {
             const quantity = state.order[itemId] ?? 0;
-            if (quantity <= 0) {
+            if (quantity - 1 <= 0) {
                 const { [itemId]: _, ...rest } = state.order;
                 return { order: rest };
             }
