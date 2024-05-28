@@ -12,7 +12,7 @@ import RestaurantEntity from './entities/restaurant.entity';
                 return new Map(
                     restaurants.map((restaurant) => [
                         restaurant.id,
-                        { ...restaurant, image: '' },
+                        restaurant,
                     ]),
                 );
             },

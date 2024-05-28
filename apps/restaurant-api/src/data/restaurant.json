@@ -4,6 +4,7 @@
       "name": "Pasta Palace",
       "id": "1",
       "address": "123 Italian St, Rome, Italy",
+      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-italian-restaurant.jpeg",
       "products": [
         {
           "id": "101",
@@ -191,6 +192,7 @@
       "name": "Sushi World",
       "id": "2",
       "address": "456 Sushi Blvd, Tokyo, Japan",
+      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-sushi-restaurant.jpeg",
       "products": [
         {
           "id": "201",
@@ -378,6 +380,7 @@
       "name": "Burger Haven",
       "id": "3",
       "address": "789 Burger Lane, New York, USA",
+      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-burger-restaurant.jpeg",
       "products": [
         {
           "id": "301",
@@ -565,6 +568,7 @@
       "name": "Pizza Parlor",
       "id": "4",
       "address": "123 Pizza Road, Naples, Italy",
+      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-pizza-restaurant.jpeg",
       "products": [
         {
           "id": "401",
@@ -752,6 +756,7 @@
       "name": "Taco Town",
       "id": "5",
       "address": "321 Taco Ave, Mexico City, Mexico",
+      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-taco-restaurant.jpeg",
       "products": [
         {
           "id": "501",

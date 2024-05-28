@@ -13,11 +13,11 @@ import { createFileRoute } from '@tanstack/react-router'
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as IndexImport } from './routes/index'
 
 // Create Virtual Routes
 
 const OrdersLazyImport = createFileRoute('/orders')()
-const IndexLazyImport = createFileRoute('/')()
 const RestaurantRestaurantIdLazyImport = createFileRoute(
   '/restaurant/$restaurantId',
 )()
@@ -29,10 +29,10 @@ const OrdersLazyRoute = OrdersLazyImport.update({
   getParentRoute: () => rootRoute,
 } as any).lazy(() => import('./routes/orders.lazy').then((d) => d.Route))
 
-const IndexLazyRoute = IndexLazyImport.update({
+const IndexRoute = IndexImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
-} as any).lazy(() => import('./routes/index.lazy').then((d) => d.Route))
+} as any)
 
 const RestaurantRestaurantIdLazyRoute = RestaurantRestaurantIdLazyImport.update(
   {
@@ -51,7 +51,7 @@ declare module '@tanstack/react-router' {
       id: '/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexLazyImport
+      preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
     '/orders': {
@@ -74,7 +74,7 @@ declare module '@tanstack/react-router' {
 // Create and export the route tree
 
 export const routeTree = rootRoute.addChildren({
-  IndexLazyRoute,
+  IndexRoute,
   OrdersLazyRoute,
   RestaurantRestaurantIdLazyRoute,
 })
@@ -93,7 +93,7 @@ export const routeTree = rootRoute.addChildren({
       ]
     },
     "/": {
-      "filePath": "index.lazy.tsx"
+      "filePath": "index.tsx"
     },
     "/orders": {
       "filePath": "orders.lazy.tsx"
