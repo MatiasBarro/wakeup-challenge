@@ -1,8 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { RestaurantsService } from './restaurants.service';
-import RestaurantEntity from '@/data/entities/restaurant.entity';
 import { Restaurant } from 'restaurant-types';
 import { NotFoundException } from '@nestjs/common';
+import { RestaurantDto } from 'restaurant-types';
 
 const restaurantMocks: Restaurant[] = Array.from({ length: 5 }, (_, i) => ({
     id: `${i + 1}`,
@@ -11,7 +11,7 @@ const restaurantMocks: Restaurant[] = Array.from({ length: 5 }, (_, i) => ({
     image: '',
 }));
 
-const restaurantDataMock = new Map<string, RestaurantEntity>(
+const restaurantDataMock = new Map<string, RestaurantDto>(
     restaurantMocks.map((restaurant) => [
         restaurant.id,
         {
