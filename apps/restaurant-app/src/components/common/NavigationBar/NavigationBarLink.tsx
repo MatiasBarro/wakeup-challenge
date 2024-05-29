@@ -17,7 +17,7 @@ export function NavigationBarLink({
             className="flex items-center gap-2 p-2 [&.active]:bg-secondary [&.active]:rounded-sm"
         >
             {icon}
-            {text}
+            <div className="hidden lg:block">{text}</div>
         </Link>
     );
 }
