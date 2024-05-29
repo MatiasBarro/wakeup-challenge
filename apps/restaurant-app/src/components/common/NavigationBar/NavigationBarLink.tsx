@@ -14,7 +14,7 @@ export function NavigationBarLink({
     return (
         <Link
             to={to}
-            className="flex items-center gap-2 p-2 [&.active]:bg-secondary [&.active]:rounded-sm"
+            className="flex items-center gap-2 p-2 hover:bg-secondary hover:rounded-sm"
         >
             {icon}
             <div className="hidden lg:block">{text}</div>
