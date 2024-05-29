@@ -1,10 +1,16 @@
 import { BadRequestException, Inject, Injectable } from '@nestjs/common';
-import { Order, Product, Restaurant, RestaurantDto } from 'restaurant-types';
-import { CreateOrderDto } from './entities/create-order.dto';
+import {
+    Order,
+    OrderDto,
+    Product,
+    Restaurant,
+    RestaurantDto,
+    CreateOrderDto,
+} from 'restaurant-types';
+import { paginator } from '@/utils/paginator/paginator';
 
 @Injectable()
 export class OrdersService {
-    private readonly orders: Map<string, Order> = new Map();
     private readonly orderProductsData: Map<
         string,
         { restaurant: Restaurant; products: Map<string, Product> }
@@ -13,6 +19,8 @@ export class OrdersService {
     constructor(
         @Inject('RESTAURANT_DATA')
         private restaurantData: Map<string, RestaurantDto>,
+        @Inject('ORDERS_DATA')
+        private orders: Map<string, Order>,
     ) {
         this.orderProductsData = new Map(
             Array.from(this.restaurantData.values()).map((restaurant) => {
@@ -28,7 +36,6 @@ export class OrdersService {
                 ];
             }),
         );
-        console.log('Order service initialized');
     }
 
     create(order: CreateOrderDto) {
@@ -73,7 +80,34 @@ export class OrdersService {
         return newOrder;
     }
 
-    findAll() {
-        return `This action returns all orders`;
+    findAll({
+        page,
+        pageSize,
+    }: {
+        page: number;
+        pageSize: number;
+    }): OrderDto[] {
+        const orders = paginator(
+            Array.from(this.orders.values()),
+            page,
+            pageSize,
+        );
+
+        return orders.map((order) => {
+            const { id, restaurantId, products: orderProducts } = order;
+            const { restaurant, products } =
+                this.orderProductsData.get(restaurantId);
+
+            return {
+                id,
+                restaurant,
+                products: Object.entries(orderProducts).map(
+                    ([productId, quantity]) => ({
+                        ...products.get(productId),
+                        quantity,
+                    }),
+                ),
+            };
+        });
     }
 }

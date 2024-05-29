@@ -1,15 +1,6 @@
-import {
-    Controller,
-    Get,
-    Post,
-    Body,
-    Patch,
-    Param,
-    Delete,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Query } from '@nestjs/common';
 import { OrdersService } from './orders.service';
-import { Order } from 'restaurant-types';
-import { CreateOrderDto } from './entities/create-order.dto';
+import { Order, CreateOrderDto } from 'restaurant-types';
 
 @Controller('orders')
 export class OrdersController {
@@ -21,7 +12,7 @@ export class OrdersController {
     }
 
     @Get()
-    findAll() {
-        return this.ordersService.findAll();
+    findAll(@Query('page') page = 1, @Query('pageSize') pageSize = 10) {
+        return this.ordersService.findAll({ page, pageSize });
     }
 }
