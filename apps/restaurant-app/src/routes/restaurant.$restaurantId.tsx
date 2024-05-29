@@ -45,14 +45,14 @@ export function Restaurant() {
 
     return (
         <div className="flex flex-col gap-6">
-            <div className="flex flex-row justify-between">
+            <ProductList restaurantId={restaurant.id} products={products} />
+            <div className="flex flex-row justify-between sticky bottom-0 z-20 opacity-100 bg-white pt-2 pb-4 border-t-4">
                 <div className="flex flex-col">
                     <TypographyH3>{restaurant.name}</TypographyH3>
                     <span>{restaurant.address}</span>
                 </div>
                 <OrderDrawer onOrderCreated={onOrderCreated} />
             </div>
-            <ProductList restaurantId={restaurant.id} products={products} />
         </div>
     );
 }
