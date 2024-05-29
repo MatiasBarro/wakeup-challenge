@@ -4,5 +4,10 @@ import { Restaurant } from './Restaurant';
 export type OrderDto = {
     id: string;
     restaurant: Restaurant;
-    products: Product & { quantity: number }[];
+    products: (Product & { quantity: number })[];
+};
+
+export type CreateOrderDto = {
+    restaurantId: string;
+    products: Record<string, number>;
 };
