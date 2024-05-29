@@ -36,4 +36,28 @@ describe('Paginator', () => {
     it('should return an empty array if page exceeds array length', () => {
         expect(paginator(testItems, 3, 10)).toEqual([]);
     });
+
+    it('should return an empty array if page equals to 0', () => {
+        expect(paginator(testItems, 0, 10)).toEqual([]);
+    });
+
+    it('should return an empty array if page is negative', () => {
+        expect(paginator(testItems, -1, 10)).toEqual([]);
+    });
+
+    it('should return an empty array if page size equals to 0', () => {
+        expect(paginator(testItems, 1, 0)).toEqual([]);
+    });
+
+    it('should return an empty array if page size is negative', () => {
+        expect(paginator(testItems, 1, -1)).toEqual([]);
+    });
+
+    it('should return an empty array if both page and page size are zero', () => {
+        expect(paginator(testItems, 0, 0)).toEqual([]);
+    });
+
+    it('should return an empty array if both page and page size are negative', () => {
+        expect(paginator(testItems, -1, -10)).toEqual([]);
+    });
 });
