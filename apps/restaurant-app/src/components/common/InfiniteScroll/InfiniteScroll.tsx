@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Spinner from '../Spinner';
+import { useToast } from '@/components/ui/use-toast';
 
 export type InfiniteScrollProps<T> = {
     initialItems?: T[];
@@ -19,6 +20,7 @@ export function InfiniteScroll<T>({
     const [items, setItems] = useState(initialItems ?? []);
     const [isLoading, setLoading] = useState(false);
     const [hasMoreItems, setHasMoreItems] = useState(true);
+    const { toast } = useToast();
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -26,16 +28,27 @@ export function InfiniteScroll<T>({
                 const target = entries[0];
                 if (target.isIntersecting && !isLoading && hasMoreItems) {
                     setLoading(true);
-                    const newItems = await fetchMoreItems(index);
-                    setLoading(false);
+                    try {
+                        const newItems = await fetchMoreItems(index);
+                        if (newItems.length === 0) {
+                            setHasMoreItems(false);
+                            return;
+                        }
 
-                    if (newItems.length === 0) {
+                        setItems([...items, ...newItems]);
+                        setIndex((prev) => prev + 1);
+                    } catch (e) {
+                        console.error(e);
+                        toast({
+                            title: 'Error fetching more items',
+                            description:
+                                'An error occurred while fetching more items. Please try again in a few minutes.',
+                            variant: 'destructive',
+                        });
                         setHasMoreItems(false);
-                        return;
+                    } finally {
+                        setLoading(false);
                     }
-
-                    setItems([...items, ...newItems]);
-                    setIndex((prev) => prev + 1);
                 }
             },
             { threshold: 1 },
