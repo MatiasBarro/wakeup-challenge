@@ -1,5 +1,11 @@
 import axios from 'axios';
-import { Product, Restaurant, RestaurantDto } from 'restaurant-types';
+import {
+    CreateOrderDto,
+    OrderDto,
+    Product,
+    Restaurant,
+    RestaurantDto,
+} from 'restaurant-types';
 
 const instance = axios.create({
     baseURL: import.meta.env.VITE_RESTAURANT_API_URL,
@@ -35,4 +41,16 @@ export async function fetchRestaurantProducts(
         },
     );
     return data;
+}
+
+export async function createOrder(
+    restaurantId: string,
+    products: Record<string, number>,
+): Promise<OrderDto> {
+    const response = await instance.post<CreateOrderDto, OrderDto>(`/orders`, {
+        restaurantId,
+        products,
+    });
+
+    return response;
 }
