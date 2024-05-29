@@ -14,7 +14,7 @@ export function RestaurantList({ restaurants }: RestaurantListProps) {
                 <RestaurantItem
                     key={restaurant.id}
                     restaurant={restaurant}
-                    className="w-full lg:w-[calc(50%-1rem)]"
+                    className="w-full"
                     onClick={() =>
                         navigate({
                             to: '/restaurant/$restaurantId',

@@ -1,37 +1,41 @@
 import { create } from 'zustand';
 
 type OrderState = {
-    order: Record<string, number>;
+    restaurantId: string;
+    products: Record<string, number>;
     addItemToOrder: (itemId: string) => void;
     removeItemFromOrder: (itemId: string) => void;
-    resetState: () => void;
+    resetState: (restaurantId: string) => void;
 };
 
 export const useOrderStore = create<OrderState>((set) => ({
-    order: {},
+    restaurantId: '',
+    products: {},
     addItemToOrder: (itemId: string) =>
         set((state) => {
             return {
-                order: {
-                    ...state.order,
-                    [itemId]: (state.order[itemId] ?? 0) + 1,
+                products: {
+                    ...state.products,
+                    [itemId]: (state.products[itemId] ?? 0) + 1,
                 },
             };
         }),
     removeItemFromOrder: (itemId: string) =>
         set((state) => {
-            const quantity = state.order[itemId] ?? 0;
+            const quantity = state.products[itemId] ?? 0;
             if (quantity - 1 <= 0) {
-                const { [itemId]: _, ...rest } = state.order;
-                return { order: rest };
+                const { [itemId]: _, ...rest } = state.products;
+                return {
+                    products: rest,
+                };
             }
 
             return {
-                order: {
-                    ...state.order,
+                products: {
+                    ...state.products,
                     [itemId]: quantity - 1,
                 },
             };
         }),
-    resetState: () => set({ order: {} }),
+    resetState: (restaurantId) => set({ restaurantId, products: {} }),
 }));
