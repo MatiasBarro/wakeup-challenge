@@ -16,7 +16,6 @@ import { createOrder } from '@/api';
 import Spinner from '@/components/common/Spinner';
 
 type OrderDrawerProps = {
-    products: Record<string, Product>;
     onOrderCreated: (order: Order) => void;
 };
 
@@ -27,14 +26,15 @@ type OrderItem = {
     quantity: number;
 };
 
-export function OrderDrawer({ products, onOrderCreated }: OrderDrawerProps) {
+export function OrderDrawer({ onOrderCreated }: OrderDrawerProps) {
     const [isCreatingOrder, setIsCreatingOrder] = useState(false);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const restaurantId = useOrderStore((state) => state.restaurantId);
-    const orderProducts = useOrderStore((state) => state.products);
+    const items = useOrderStore((state) => state.items);
+    const products = useOrderStore((state) => state.products);
     const orderItems: OrderItem[] = useMemo(
         () =>
-            Object.entries(orderProducts).map((item) => {
+            Object.entries(items).map((item) => {
                 const [itemId, quantity] = item;
                 const { name, price } = products[itemId];
                 return {
@@ -44,7 +44,7 @@ export function OrderDrawer({ products, onOrderCreated }: OrderDrawerProps) {
                     quantity,
                 };
             }),
-        [orderProducts],
+        [items, products],
     );
 
     const total = useMemo(() => {
@@ -58,9 +58,8 @@ export function OrderDrawer({ products, onOrderCreated }: OrderDrawerProps) {
         setIsCreatingOrder(true);
         const order = await createOrder({
             restaurantId,
-            products: orderProducts,
+            products: items,
         });
-        console.log(order);
         setIsCreatingOrder(false);
         setIsDrawerOpen(false);
         onOrderCreated(order);

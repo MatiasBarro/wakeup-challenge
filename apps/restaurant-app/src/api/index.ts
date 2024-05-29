@@ -21,11 +21,12 @@ export async function fetchRestaurants(): Promise<Restaurant[]> {
 
 export async function fetchRestaurantById(
     restaurantId: string,
+    withProducts: number = 10,
 ): Promise<RestaurantDto> {
     const { data } = await instance.get<RestaurantDto>(
         `/restaurants/${restaurantId}`,
         {
-            params: { withProducts: 10 },
+            params: { withProducts },
         },
     );
 
@@ -34,11 +35,13 @@ export async function fetchRestaurantById(
 
 export async function fetchRestaurantProducts(
     restaurantId: string,
+    page: number,
+    pageSize: number = 10,
 ): Promise<Product[]> {
     const { data } = await instance.get<Product[]>(
         `/restaurants/${restaurantId}/products`,
         {
-            params: { page: 1, pageSize: 10 },
+            params: { page, pageSize },
         },
     );
     return data;

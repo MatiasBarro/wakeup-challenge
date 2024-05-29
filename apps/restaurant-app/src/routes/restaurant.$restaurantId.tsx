@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Order, Product } from 'restaurant-types';
+import { Order } from 'restaurant-types';
 import { fetchRestaurantById } from '@/api';
 import OrderDrawer from '@/components/restaurants/OrderDrawer';
 import ProductList from '@/components/restaurants/ProductList';
@@ -11,22 +11,14 @@ import { useToast } from '@/components/ui/use-toast';
 export const Route = createFileRoute('/restaurant/$restaurantId')({
     component: () => <Restaurant />,
     loader: async ({ params: { restaurantId } }) => {
-        const { products, ...restaurant } =
-            await fetchRestaurantById(restaurantId);
-
-        const productsMap = products
-            ? products?.reduce(
-                  (acc, product) => {
-                      acc[product.id] = product;
-                      return acc;
-                  },
-                  {} as Record<string, Product>,
-              )
-            : {};
+        const { products, ...restaurant } = await fetchRestaurantById(
+            restaurantId,
+            15,
+        );
 
         return {
             restaurant,
-            products: productsMap,
+            products: products ?? [],
         };
     },
 });
@@ -35,10 +27,12 @@ export function Restaurant() {
     const location = useLocation();
     const { restaurant, products } = Route.useLoaderData();
     const resetOrderState = useOrderStore((state) => state.resetState);
+    const addProducts = useOrderStore((state) => state.addProducts);
     const { toast } = useToast();
 
     useEffect(() => {
         resetOrderState(restaurant.id);
+        addProducts(products ?? []);
     }, [location.pathname]);
 
     const onOrderCreated = (order: Order) => {
@@ -56,12 +50,9 @@ export function Restaurant() {
                     <TypographyH3>{restaurant.name}</TypographyH3>
                     <span>{restaurant.address}</span>
                 </div>
-                <OrderDrawer
-                    products={products}
-                    onOrderCreated={onOrderCreated}
-                />
+                <OrderDrawer onOrderCreated={onOrderCreated} />
             </div>
-            <ProductList products={Object.values(products)} />
+            <ProductList restaurantId={restaurant.id} products={products} />
         </div>
     );
 }
