@@ -3,7 +3,6 @@ import {
     ErrorComponent,
     Outlet,
 } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import NavigationBar from '@/components/common/NavigationBar';
 import { Toaster } from '@/components/ui/toaster';
 
@@ -18,7 +17,6 @@ export const Route = createRootRoute({
                 <Outlet />
             </div>
             <Toaster />
-            <TanStackRouterDevtools />
         </div>
     ),
 });
