@@ -36,7 +36,7 @@ export function Restaurant() {
     const resetOrderState = useOrderStore((state) => state.resetState);
 
     useEffect(() => {
-        resetOrderState();
+        resetOrderState(restaurant.id);
     }, [location.pathname]);
 
     return (
@@ -46,7 +46,10 @@ export function Restaurant() {
                     <TypographyH3>{restaurant.name}</TypographyH3>
                     <span>{restaurant.address}</span>
                 </div>
-                <OrderDrawer products={products} />
+                <OrderDrawer
+                    products={products}
+                    onOrderCreated={() => resetOrderState(restaurant.id)}
+                />
             </div>
             <ProductList products={Object.values(products)} />
         </div>
