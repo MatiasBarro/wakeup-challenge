@@ -1,7 +1,8 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import {
     CreateOrderDto,
     Order,
+    OrderDto,
     Product,
     Restaurant,
     RestaurantDto,
@@ -37,7 +38,7 @@ export async function fetchRestaurantProducts(
     const { data } = await instance.get<Product[]>(
         `/restaurants/${restaurantId}/products`,
         {
-            params: { page: 1, pageSize: 50 },
+            params: { page: 1, pageSize: 10 },
         },
     );
     return data;
@@ -45,6 +46,14 @@ export async function fetchRestaurantProducts(
 
 export async function createOrder(order: CreateOrderDto): Promise<Order> {
     const { data } = await instance.post<Order>(`/orders`, order);
+
+    return data;
+}
+
+export async function fetchOrders(): Promise<OrderDto[]> {
+    const { data } = await instance.get<OrderDto[]>('/orders', {
+        params: { page: 1, pageSize: 30 },
+    });
 
     return data;
 }
