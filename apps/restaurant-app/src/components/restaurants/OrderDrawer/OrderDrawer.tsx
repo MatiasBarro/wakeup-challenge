@@ -17,7 +17,7 @@ import Spinner from '@/components/common/Spinner';
 
 type OrderDrawerProps = {
     products: Record<string, Product>;
-    onOrderCreated: (order: OrderDto) => void;
+    onOrderCreated: (order: Order) => void;
 };
 
 type OrderItem = {
@@ -56,7 +56,11 @@ export function OrderDrawer({ products, onOrderCreated }: OrderDrawerProps) {
 
     const handleCreateOrder = async () => {
         setIsCreatingOrder(true);
-        const order = await createOrder(restaurantId, orderProducts);
+        const order = await createOrder({
+            restaurantId,
+            products: orderProducts,
+        });
+        console.log(order);
         setIsCreatingOrder(false);
         setIsDrawerOpen(false);
         onOrderCreated(order);

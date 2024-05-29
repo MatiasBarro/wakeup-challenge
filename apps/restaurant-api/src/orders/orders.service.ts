@@ -38,7 +38,7 @@ export class OrdersService {
         );
     }
 
-    create(order: CreateOrderDto) {
+    create(order: CreateOrderDto): Order {
         if (
             !order.restaurantId ||
             !this.orderProductsData.has(order.restaurantId)
