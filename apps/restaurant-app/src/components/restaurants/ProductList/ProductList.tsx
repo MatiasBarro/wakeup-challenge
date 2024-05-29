@@ -27,6 +27,7 @@ export function ProductList({
             className={`flex flex-wrap gap-y-4 justify-between ${className}`}
             initialItems={products}
             fetchMoreItems={async (index) => {
+                //As initial products are 15, we fetch 5 more products each time to reach 30 max
                 const newProducts = await fetchRestaurantProducts(
                     restaurantId,
                     3 + index,

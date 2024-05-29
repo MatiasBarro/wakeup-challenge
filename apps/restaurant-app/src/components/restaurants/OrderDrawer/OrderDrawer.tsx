@@ -1,5 +1,4 @@
-import { useMemo, useState } from 'react';
-import { OrderDto, Product } from 'restaurant-types';
+import { useCallback, useMemo, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
     Drawer,
@@ -14,6 +13,8 @@ import { cn } from '@/lib/utils';
 import { useOrderStore } from '@/stores/useOrderStore';
 import { createOrder } from '@/api';
 import Spinner from '@/components/common/Spinner';
+import { Order } from 'restaurant-types';
+import { useToast } from '@/components/ui/use-toast';
 
 type OrderDrawerProps = {
     onOrderCreated: (order: Order) => void;
@@ -32,6 +33,8 @@ export function OrderDrawer({ onOrderCreated }: OrderDrawerProps) {
     const restaurantId = useOrderStore((state) => state.restaurantId);
     const items = useOrderStore((state) => state.items);
     const products = useOrderStore((state) => state.products);
+    const { toast } = useToast();
+
     const orderItems: OrderItem[] = useMemo(
         () =>
             Object.entries(items).map((item) => {
@@ -54,16 +57,27 @@ export function OrderDrawer({ onOrderCreated }: OrderDrawerProps) {
         );
     }, [orderItems]);
 
-    const handleCreateOrder = async () => {
+    const handleCreateOrder = useCallback(async () => {
         setIsCreatingOrder(true);
-        const order = await createOrder({
-            restaurantId,
-            products: items,
-        });
-        setIsCreatingOrder(false);
-        setIsDrawerOpen(false);
-        onOrderCreated(order);
-    };
+        try {
+            const order = await createOrder({
+                restaurantId,
+                products: items,
+            });
+            setIsDrawerOpen(false);
+            onOrderCreated(order);
+        } catch (error) {
+            console.error('Error creating order', error);
+            toast({
+                title: 'Error creating order',
+                description:
+                    'An error occurred while creating the order. Please try again.',
+                variant: 'destructive',
+            });
+        } finally {
+            setIsCreatingOrder(false);
+        }
+    }, [restaurantId, items, onOrderCreated, toast]);
 
     return (
         <Drawer
