@@ -87,6 +87,77 @@ describe('RestaurantsService', () => {
                 expected,
             );
         });
+
+        it('should return an empty array when page is negative', () => {
+            const expected = [];
+            expect(service.findAll({ page: -1, pageSize: 10 })).toEqual(
+                expected,
+            );
+        });
+
+        it('should return an empty array when page is zero', () => {
+            const expected = [];
+            expect(service.findAll({ page: 0, pageSize: 10 })).toEqual(
+                expected,
+            );
+        });
+
+        it('should return an empty array when page size is negative', () => {
+            const expected = [];
+            expect(service.findAll({ page: 1, pageSize: -10 })).toEqual(
+                expected,
+            );
+        });
+
+        it('should return an empty array when page size is zero', () => {
+            const expected = [];
+            expect(service.findAll({ page: 1, pageSize: -10 })).toEqual(
+                expected,
+            );
+        });
+    });
+
+    describe('findById', () => {
+        it('should return a restaurant without products', () => {
+            const { products, ...restaurant } = restaurantDataMock.get('1');
+
+            expect(service.findById({ id: '1' })).toEqual(restaurant);
+        });
+
+        it('should return a restaurant with 1 product', () => {
+            const { products, ...restaurant } = restaurantDataMock.get('1');
+
+            expect(service.findById({ id: '1', withProducts: 1 })).toEqual({
+                ...restaurant,
+                products: [products[0]],
+            });
+        });
+
+        it('should return a restaurant with all product when withProducts param exceeds array size', () => {
+            const { products, ...restaurant } = restaurantDataMock.get('1');
+
+            expect(service.findById({ id: '1', withProducts: 10 })).toEqual({
+                ...restaurant,
+                products,
+            });
+        });
+
+        it('should return a restaurant without product when withProducts param is lower than 0', () => {
+            const { products, ...restaurant } = restaurantDataMock.get('1');
+
+            expect(service.findById({ id: '1', withProducts: -10 })).toEqual(
+                restaurant,
+            );
+        });
+
+        it('should return an error when restaurant does not exists', () => {
+            try {
+                service.findById({ id: '100' });
+            } catch (error) {
+                expect(error).toBeInstanceOf(NotFoundException);
+                expect(error.message).toBe('Restaurant#100 not found');
+            }
+        });
     });
 
     describe('findRestaurantProducts', () => {
@@ -170,6 +241,50 @@ describe('RestaurantsService', () => {
                     restaurantId: '1',
                     page: 2,
                     pageSize: 10,
+                }),
+            ).toEqual(expected);
+        });
+
+        it('should return an empty array when page is zero', () => {
+            const expected = [];
+            expect(
+                service.findRestaurantProducts({
+                    restaurantId: '1',
+                    page: 0,
+                    pageSize: 10,
+                }),
+            ).toEqual(expected);
+        });
+
+        it('should return an empty array when page is negative', () => {
+            const expected = [];
+            expect(
+                service.findRestaurantProducts({
+                    restaurantId: '1',
+                    page: -1,
+                    pageSize: 10,
+                }),
+            ).toEqual(expected);
+        });
+
+        it('should return an empty array when page size is zero', () => {
+            const expected = [];
+            expect(
+                service.findRestaurantProducts({
+                    restaurantId: '1',
+                    page: 1,
+                    pageSize: 0,
+                }),
+            ).toEqual(expected);
+        });
+
+        it('should return an empty array when page size is negative', () => {
+            const expected = [];
+            expect(
+                service.findRestaurantProducts({
+                    restaurantId: '1',
+                    page: 1,
+                    pageSize: -10,
                 }),
             ).toEqual(expected);
         });
