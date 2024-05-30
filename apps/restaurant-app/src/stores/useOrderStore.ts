@@ -40,6 +40,7 @@ export const useOrderStore = create<OrderState>((set) => ({
         set((state) => {
             const quantity = state.items[itemId] ?? 0;
             if (quantity - 1 <= 0) {
+                /* eslint-disable @typescript-eslint/no-unused-vars */
                 const { [itemId]: _, ...rest } = state.items;
                 return {
                     items: rest,

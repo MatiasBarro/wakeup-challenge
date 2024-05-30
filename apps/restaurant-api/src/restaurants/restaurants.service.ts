@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { Product, Restaurant } from 'restaurant-types';
 import { paginator } from '@/utils/paginator/paginator';
@@ -19,7 +20,7 @@ export class RestaurantsService {
     }): Restaurant[] {
         return paginator(
             Array.from(this.restaurantData.values()).map(
-                ({ products, ...restaurant }) => restaurant,
+                ({ products: _, ...restaurant }) => restaurant,
             ),
             page,
             pageSize,

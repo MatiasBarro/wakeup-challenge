@@ -75,7 +75,7 @@ describe('OrdersService', () => {
                 },
             };
 
-            const espected = expect(service.create(order)).toEqual({
+            expect(service.create(order)).toEqual({
                 ...order,
                 id: expect.any(String),
             });

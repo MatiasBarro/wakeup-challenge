@@ -1,884 +1,884 @@
 {
-  "restaurants": [
-    {
-      "name": "Pasta Palace",
-      "id": "1",
-      "address": "123 Italian St, Rome, Italy",
-      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-italian-restaurant.jpeg",
-      "products": [
+    "restaurants": [
         {
-          "id": "101",
-          "name": "Spaghetti Carbonara",
-          "description": "Classic Italian pasta with eggs, cheese, pancetta, and pepper.",
-          "price": 12.50
+            "name": "Pasta Palace",
+            "id": "1",
+            "address": "123 Italian St, Rome, Italy",
+            "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-italian-restaurant.jpeg",
+            "products": [
+                {
+                    "id": "101",
+                    "name": "Spaghetti Carbonara",
+                    "description": "Classic Italian pasta with eggs, cheese, pancetta, and pepper.",
+                    "price": 12.5
+                },
+                {
+                    "id": "102",
+                    "name": "Fettuccine Alfredo",
+                    "description": "Fettuccine pasta in a rich and creamy Alfredo sauce.",
+                    "price": 14.0
+                },
+                {
+                    "id": "103",
+                    "name": "Lasagna",
+                    "description": "Layers of pasta, ricotta cheese, meat sauce, and melted mozzarella.",
+                    "price": 15.0
+                },
+                {
+                    "id": "104",
+                    "name": "Penne Arrabbiata",
+                    "description": "Penne pasta with a spicy tomato sauce.",
+                    "price": 11.0
+                },
+                {
+                    "id": "105",
+                    "name": "Gnocchi al Pesto",
+                    "description": "Potato dumplings in a fresh basil pesto sauce.",
+                    "price": 13.0
+                },
+                {
+                    "id": "106",
+                    "name": "Ravioli di Ricotta",
+                    "description": "Ricotta cheese-filled ravioli with a tomato basil sauce.",
+                    "price": 14.5
+                },
+                {
+                    "id": "107",
+                    "name": "Tagliatelle Bolognese",
+                    "description": "Tagliatelle pasta with a rich and savory meat sauce.",
+                    "price": 15.0
+                },
+                {
+                    "id": "108",
+                    "name": "Tortellini Alfredo",
+                    "description": "Cheese-filled tortellini in a creamy Alfredo sauce.",
+                    "price": 14.5
+                },
+                {
+                    "id": "109",
+                    "name": "Pappardelle al Funghi",
+                    "description": "Pappardelle pasta with a wild mushroom sauce.",
+                    "price": 15.5
+                },
+                {
+                    "id": "110",
+                    "name": "Risotto alla Milanese",
+                    "description": "Creamy saffron risotto.",
+                    "price": 16.0
+                },
+                {
+                    "id": "111",
+                    "name": "Farfalle al Salmone",
+                    "description": "Bow-tie pasta with smoked salmon in a cream sauce.",
+                    "price": 16.5
+                },
+                {
+                    "id": "112",
+                    "name": "Rigatoni alla Norma",
+                    "description": "Rigatoni pasta with eggplant, tomato, and ricotta salata.",
+                    "price": 14.0
+                },
+                {
+                    "id": "113",
+                    "name": "Linguine alle Vongole",
+                    "description": "Linguine pasta with fresh clams in a white wine sauce.",
+                    "price": 17.0
+                },
+                {
+                    "id": "114",
+                    "name": "Cacio e Pepe",
+                    "description": "Spaghetti with Pecorino Romano cheese and black pepper.",
+                    "price": 12.0
+                },
+                {
+                    "id": "115",
+                    "name": "Calamari Fritti",
+                    "description": "Fried calamari served with marinara sauce.",
+                    "price": 11.5
+                },
+                {
+                    "id": "116",
+                    "name": "Bruschetta al Pomodoro",
+                    "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
+                    "price": 9.0
+                },
+                {
+                    "id": "117",
+                    "name": "Caprese Salad",
+                    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+                    "price": 10.0
+                },
+                {
+                    "id": "118",
+                    "name": "Insalata Caesar",
+                    "description": "Romaine lettuce, croutons, and Parmesan cheese with Caesar dressing.",
+                    "price": 10.5
+                },
+                {
+                    "id": "119",
+                    "name": "Minestrone Soup",
+                    "description": "Traditional Italian vegetable soup.",
+                    "price": 8.0
+                },
+                {
+                    "id": "120",
+                    "name": "Zuppa Toscana",
+                    "description": "Tuscan soup with potatoes, kale, and Italian sausage.",
+                    "price": 9.5
+                },
+                {
+                    "id": "121",
+                    "name": "Prosciutto e Melone",
+                    "description": "Prosciutto ham with fresh melon.",
+                    "price": 12.0
+                },
+                {
+                    "id": "122",
+                    "name": "Arancini",
+                    "description": "Fried risotto balls stuffed with cheese.",
+                    "price": 10.0
+                },
+                {
+                    "id": "123",
+                    "name": "Polenta Fries",
+                    "description": "Crispy fried polenta sticks served with marinara.",
+                    "price": 8.5
+                },
+                {
+                    "id": "124",
+                    "name": "Parmigiana di Melanzane",
+                    "description": "Baked eggplant with tomato sauce and mozzarella.",
+                    "price": 13.5
+                },
+                {
+                    "id": "125",
+                    "name": "Osso Buco",
+                    "description": "Braised veal shanks served with gremolata.",
+                    "price": 22.0
+                },
+                {
+                    "id": "126",
+                    "name": "Saltimbocca alla Romana",
+                    "description": "Veal topped with prosciutto and sage in a white wine sauce.",
+                    "price": 20.0
+                },
+                {
+                    "id": "127",
+                    "name": "Tiramisu",
+                    "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+                    "price": 7.5
+                },
+                {
+                    "id": "128",
+                    "name": "Panna Cotta",
+                    "description": "Creamy Italian custard served with berry sauce.",
+                    "price": 8.0
+                },
+                {
+                    "id": "129",
+                    "name": "Cannoli",
+                    "description": "Crispy pastry shells filled with sweet ricotta cheese.",
+                    "price": 6.5
+                },
+                {
+                    "id": "130",
+                    "name": "Gelato",
+                    "description": "Italian-style ice cream available in various flavors.",
+                    "price": 5.0
+                }
+            ]
         },
         {
-          "id": "102",
-          "name": "Fettuccine Alfredo",
-          "description": "Fettuccine pasta in a rich and creamy Alfredo sauce.",
-          "price": 14.00
+            "name": "Sushi World",
+            "id": "2",
+            "address": "456 Sushi Blvd, Tokyo, Japan",
+            "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-sushi-restaurant.jpeg",
+            "products": [
+                {
+                    "id": "201",
+                    "name": "California Roll",
+                    "description": "Sushi roll with crab, avocado, and cucumber.",
+                    "price": 8.5
+                },
+                {
+                    "id": "202",
+                    "name": "Salmon Nigiri",
+                    "description": "Fresh salmon on top of seasoned rice.",
+                    "price": 10.0
+                },
+                {
+                    "id": "203",
+                    "name": "Tempura Roll",
+                    "description": "Sushi roll with tempura shrimp, avocado, and spicy mayo.",
+                    "price": 12.0
+                },
+                {
+                    "id": "204",
+                    "name": "Spicy Tuna Roll",
+                    "description": "Sushi roll with spicy tuna, cucumber, and sesame seeds.",
+                    "price": 9.5
+                },
+                {
+                    "id": "205",
+                    "name": "Eel Nigiri",
+                    "description": "Grilled eel on top of seasoned rice.",
+                    "price": 11.0
+                },
+                {
+                    "id": "206",
+                    "name": "Rainbow Roll",
+                    "description": "Sushi roll with crab, avocado, and cucumber topped with assorted fish.",
+                    "price": 14.0
+                },
+                {
+                    "id": "207",
+                    "name": "Dragon Roll",
+                    "description": "Sushi roll with tempura shrimp, cucumber, and avocado topped with eel and avocado.",
+                    "price": 15.0
+                },
+                {
+                    "id": "208",
+                    "name": "Philadelphia Roll",
+                    "description": "Sushi roll with smoked salmon, cream cheese, and cucumber.",
+                    "price": 10.5
+                },
+                {
+                    "id": "209",
+                    "name": "Yellowtail Sashimi",
+                    "description": "Thinly sliced yellowtail served with ponzu sauce.",
+                    "price": 13.0
+                },
+                {
+                    "id": "210",
+                    "name": "Shrimp Tempura",
+                    "description": "Crispy fried shrimp served with tempura sauce.",
+                    "price": 8.5
+                },
+                {
+                    "id": "211",
+                    "name": "Miso Soup",
+                    "description": "Traditional Japanese soup with tofu, seaweed, and green onions.",
+                    "price": 3.5
+                },
+                {
+                    "id": "212",
+                    "name": "Edamame",
+                    "description": "Steamed and salted young soybeans.",
+                    "price": 4.0
+                },
+                {
+                    "id": "213",
+                    "name": "Seaweed Salad",
+                    "description": "Marinated seaweed with sesame seeds.",
+                    "price": 5.0
+                },
+                {
+                    "id": "214",
+                    "name": "Gyoza",
+                    "description": "Pan-fried Japanese dumplings filled with pork and vegetables.",
+                    "price": 6.5
+                },
+                {
+                    "id": "215",
+                    "name": "Agedashi Tofu",
+                    "description": "Deep-fried tofu in a dashi broth.",
+                    "price": 6.0
+                },
+                {
+                    "id": "216",
+                    "name": "Tonkatsu",
+                    "description": "Breaded and deep-fried pork cutlet served with tonkatsu sauce.",
+                    "price": 11.5
+                },
+                {
+                    "id": "217",
+                    "name": "Chicken Katsu",
+                    "description": "Breaded and deep-fried chicken cutlet served with tonkatsu sauce.",
+                    "price": 10.5
+                },
+                {
+                    "id": "218",
+                    "name": "Katsu Don",
+                    "description": "Breaded pork cutlet served over rice with egg and onions.",
+                    "price": 12.0
+                },
+                {
+                    "id": "219",
+                    "name": "Unagi Don",
+                    "description": "Grilled eel served over a bed of rice.",
+                    "price": 16.0
+                },
+                {
+                    "id": "220",
+                    "name": "Sake",
+                    "description": "Traditional Japanese rice wine.",
+                    "price": 7.0
+                },
+                {
+                    "id": "221",
+                    "name": "Matcha Ice Cream",
+                    "description": "Green tea-flavored ice cream.",
+                    "price": 4.0
+                },
+                {
+                    "id": "222",
+                    "name": "Mochi Ice Cream",
+                    "description": "Sweet rice cake filled with ice cream.",
+                    "price": 5.0
+                },
+                {
+                    "id": "223",
+                    "name": "Green Tea",
+                    "description": "Traditional Japanese green tea.",
+                    "price": 3.0
+                },
+                {
+                    "id": "224",
+                    "name": "Hamachi Kama",
+                    "description": "Grilled yellowtail collar served with ponzu sauce.",
+                    "price": 10.0
+                },
+                {
+                    "id": "225",
+                    "name": "Takoyaki",
+                    "description": "Fried octopus balls drizzled with takoyaki sauce and mayo.",
+                    "price": 7.5
+                },
+                {
+                    "id": "226",
+                    "name": "Ikura Sushi",
+                    "description": "Salmon roe on top of seasoned rice.",
+                    "price": 12.0
+                },
+                {
+                    "id": "227",
+                    "name": "Chirashi Bowl",
+                    "description": "Assorted sashimi served over a bowl of sushi rice.",
+                    "price": 18.5
+                },
+                {
+                    "id": "228",
+                    "name": "Soba Noodles",
+                    "description": "Buckwheat noodles served in a hot or cold broth.",
+                    "price": 9.0
+                },
+                {
+                    "id": "229",
+                    "name": "Udon Noodles",
+                    "description": "Thick wheat noodles served in a hot broth.",
+                    "price": 10.0
+                },
+                {
+                    "id": "230",
+                    "name": "Tamago Sushi",
+                    "description": "Sweet Japanese omelette on top of seasoned rice.",
+                    "price": 5.5
+                }
+            ]
         },
         {
-          "id": "103",
-          "name": "Lasagna",
-          "description": "Layers of pasta, ricotta cheese, meat sauce, and melted mozzarella.",
-          "price": 15.00
+            "name": "Burger Haven",
+            "id": "3",
+            "address": "789 Burger Lane, New York, USA",
+            "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-burger-restaurant.jpeg",
+            "products": [
+                {
+                    "id": "301",
+                    "name": "Classic Cheeseburger",
+                    "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
+                    "price": 11.0
+                },
+                {
+                    "id": "302",
+                    "name": "Bacon Burger",
+                    "description": "Beef patty topped with crispy bacon, cheddar cheese, and BBQ sauce.",
+                    "price": 13.0
+                },
+                {
+                    "id": "303",
+                    "name": "Veggie Burger",
+                    "description": "Grilled veggie patty with lettuce, tomato, and avocado.",
+                    "price": 10.0
+                },
+                {
+                    "id": "304",
+                    "name": "Mushroom Swiss Burger",
+                    "description": "Beef patty topped with sautéed mushrooms and Swiss cheese.",
+                    "price": 12.0
+                },
+                {
+                    "id": "305",
+                    "name": "BBQ Chicken Sandwich",
+                    "description": "Grilled chicken breast with BBQ sauce, lettuce, and tomato.",
+                    "price": 11.5
+                },
+                {
+                    "id": "306",
+                    "name": "Buffalo Chicken Sandwich",
+                    "description": "Fried chicken breast tossed in buffalo sauce with lettuce and ranch.",
+                    "price": 12.5
+                },
+                {
+                    "id": "307",
+                    "name": "Turkey Burger",
+                    "description": "Lean turkey patty with lettuce, tomato, and avocado.",
+                    "price": 10.5
+                },
+                {
+                    "id": "308",
+                    "name": "Double Cheeseburger",
+                    "description": "Two beef patties with double cheddar cheese, lettuce, and tomato.",
+                    "price": 15.0
+                },
+                {
+                    "id": "309",
+                    "name": "Avocado Bacon Burger",
+                    "description": "Beef patty topped with avocado, crispy bacon, and cheddar cheese.",
+                    "price": 14.0
+                },
+                {
+                    "id": "310",
+                    "name": "Jalapeño Burger",
+                    "description": "Beef patty with spicy jalapeños, pepper jack cheese, and chipotle mayo.",
+                    "price": 12.5
+                },
+                {
+                    "id": "311",
+                    "name": "Onion Ring Burger",
+                    "description": "Beef patty topped with crispy onion rings, BBQ sauce, and cheddar cheese.",
+                    "price": 13.5
+                },
+                {
+                    "id": "312",
+                    "name": "Pulled Pork Sandwich",
+                    "description": "Slow-cooked pulled pork with BBQ sauce and coleslaw on a bun.",
+                    "price": 11.5
+                },
+                {
+                    "id": "313",
+                    "name": "Philly Cheesesteak",
+                    "description": "Sliced steak with sautéed onions, peppers, and melted cheese on a hoagie roll.",
+                    "price": 14.0
+                },
+                {
+                    "id": "314",
+                    "name": "Chicken Caesar Wrap",
+                    "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing in a wrap.",
+                    "price": 10.0
+                },
+                {
+                    "id": "315",
+                    "name": "Fish Tacos",
+                    "description": "Grilled fish with cabbage slaw, pico de gallo, and chipotle mayo in corn tortillas.",
+                    "price": 12.0
+                },
+                {
+                    "id": "316",
+                    "name": "BLT Sandwich",
+                    "description": "Bacon, lettuce, and tomato with mayo on toasted bread.",
+                    "price": 9.5
+                },
+                {
+                    "id": "317",
+                    "name": "Grilled Cheese Sandwich",
+                    "description": "Melted cheddar cheese on toasted bread.",
+                    "price": 7.0
+                },
+                {
+                    "id": "318",
+                    "name": "Chili Cheese Fries",
+                    "description": "Crispy fries topped with chili and melted cheese.",
+                    "price": 8.0
+                },
+                {
+                    "id": "319",
+                    "name": "Sweet Potato Fries",
+                    "description": "Crispy sweet potato fries served with a side of ranch.",
+                    "price": 6.0
+                },
+                {
+                    "id": "320",
+                    "name": "Mozzarella Sticks",
+                    "description": "Fried mozzarella sticks served with marinara sauce.",
+                    "price": 7.5
+                },
+                {
+                    "id": "321",
+                    "name": "Buffalo Wings",
+                    "description": "Spicy buffalo wings served with celery and blue cheese dressing.",
+                    "price": 10.0
+                },
+                {
+                    "id": "322",
+                    "name": "Nachos",
+                    "description": "Tortilla chips topped with cheese, jalapeños, sour cream, and salsa.",
+                    "price": 9.0
+                },
+                {
+                    "id": "323",
+                    "name": "House Salad",
+                    "description": "Mixed greens with tomatoes, cucumbers, and carrots with your choice of dressing.",
+                    "price": 7.5
+                },
+                {
+                    "id": "324",
+                    "name": "Caesar Salad",
+                    "description": "Romaine lettuce with Parmesan cheese, croutons, and Caesar dressing.",
+                    "price": 8.0
+                },
+                {
+                    "id": "325",
+                    "name": "Coleslaw",
+                    "description": "Creamy coleslaw made with cabbage and carrots.",
+                    "price": 4.0
+                },
+                {
+                    "id": "326",
+                    "name": "Mac and Cheese",
+                    "description": "Creamy macaroni and cheese with a crispy breadcrumb topping.",
+                    "price": 6.5
+                },
+                {
+                    "id": "327",
+                    "name": "Apple Pie",
+                    "description": "Classic apple pie served with vanilla ice cream.",
+                    "price": 5.0
+                },
+                {
+                    "id": "328",
+                    "name": "Chocolate Cake",
+                    "description": "Rich chocolate cake with a chocolate ganache topping.",
+                    "price": 6.0
+                },
+                {
+                    "id": "329",
+                    "name": "Milkshake",
+                    "description": "Thick and creamy milkshake available in vanilla, chocolate, and strawberry.",
+                    "price": 5.0
+                },
+                {
+                    "id": "330",
+                    "name": "Soft Drink",
+                    "description": "Assorted soft drinks.",
+                    "price": 2.5
+                }
+            ]
         },
         {
-          "id": "104",
-          "name": "Penne Arrabbiata",
-          "description": "Penne pasta with a spicy tomato sauce.",
-          "price": 11.00
+            "name": "Pizza Parlor",
+            "id": "4",
+            "address": "123 Pizza Road, Naples, Italy",
+            "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-pizza-restaurant.jpeg",
+            "products": [
+                {
+                    "id": "401",
+                    "name": "Margherita Pizza",
+                    "description": "Classic pizza with tomato sauce, mozzarella, and basil.",
+                    "price": 10.0
+                },
+                {
+                    "id": "402",
+                    "name": "Pepperoni Pizza",
+                    "description": "Pizza topped with pepperoni slices and mozzarella cheese.",
+                    "price": 12.0
+                },
+                {
+                    "id": "403",
+                    "name": "BBQ Chicken Pizza",
+                    "description": "Pizza topped with BBQ chicken, red onions, and cilantro.",
+                    "price": 13.5
+                },
+                {
+                    "id": "404",
+                    "name": "Hawaiian Pizza",
+                    "description": "Pizza with ham, pineapple, and mozzarella cheese.",
+                    "price": 11.5
+                },
+                {
+                    "id": "405",
+                    "name": "Veggie Pizza",
+                    "description": "Pizza topped with bell peppers, onions, mushrooms, and olives.",
+                    "price": 12.0
+                },
+                {
+                    "id": "406",
+                    "name": "Four Cheese Pizza",
+                    "description": "Pizza with mozzarella, cheddar, Parmesan, and blue cheese.",
+                    "price": 14.0
+                },
+                {
+                    "id": "407",
+                    "name": "Meat Lovers Pizza",
+                    "description": "Pizza topped with pepperoni, sausage, ham, and bacon.",
+                    "price": 15.0
+                },
+                {
+                    "id": "408",
+                    "name": "White Pizza",
+                    "description": "Pizza with ricotta, mozzarella, and Parmesan cheese.",
+                    "price": 13.0
+                },
+                {
+                    "id": "409",
+                    "name": "Spinach and Feta Pizza",
+                    "description": "Pizza topped with spinach, feta cheese, and garlic.",
+                    "price": 13.5
+                },
+                {
+                    "id": "410",
+                    "name": "Buffalo Chicken Pizza",
+                    "description": "Pizza with buffalo chicken, mozzarella, and blue cheese dressing.",
+                    "price": 14.0
+                },
+                {
+                    "id": "411",
+                    "name": "Marinara Pizza",
+                    "description": "Pizza with tomato sauce, garlic, oregano, and olive oil.",
+                    "price": 9.0
+                },
+                {
+                    "id": "412",
+                    "name": "Capricciosa Pizza",
+                    "description": "Pizza with ham, mushrooms, artichokes, and olives.",
+                    "price": 14.0
+                },
+                {
+                    "id": "413",
+                    "name": "Quattro Stagioni Pizza",
+                    "description": "Pizza divided into four sections with different toppings.",
+                    "price": 15.0
+                },
+                {
+                    "id": "414",
+                    "name": "Calzone",
+                    "description": "Folded pizza filled with ricotta, mozzarella, and ham.",
+                    "price": 12.5
+                },
+                {
+                    "id": "415",
+                    "name": "Stromboli",
+                    "description": "Rolled pizza with mozzarella, pepperoni, and ham.",
+                    "price": 13.0
+                },
+                {
+                    "id": "416",
+                    "name": "Garlic Knots",
+                    "description": "Knotted bread topped with garlic and Parmesan cheese.",
+                    "price": 6.0
+                },
+                {
+                    "id": "417",
+                    "name": "Mozzarella Sticks",
+                    "description": "Fried mozzarella sticks served with marinara sauce.",
+                    "price": 7.5
+                },
+                {
+                    "id": "418",
+                    "name": "Caesar Salad",
+                    "description": "Romaine lettuce with Parmesan cheese, croutons, and Caesar dressing.",
+                    "price": 8.0
+                },
+                {
+                    "id": "419",
+                    "name": "Antipasto Salad",
+                    "description": "Mixed greens with Italian meats, cheese, and olives.",
+                    "price": 9.5
+                },
+                {
+                    "id": "420",
+                    "name": "Caprese Salad",
+                    "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
+                    "price": 10.0
+                },
+                {
+                    "id": "421",
+                    "name": "Tiramisu",
+                    "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
+                    "price": 7.5
+                },
+                {
+                    "id": "422",
+                    "name": "Panna Cotta",
+                    "description": "Creamy Italian custard served with berry sauce.",
+                    "price": 8.0
+                },
+                {
+                    "id": "423",
+                    "name": "Cannoli",
+                    "description": "Crispy pastry shells filled with sweet ricotta cheese.",
+                    "price": 6.5
+                },
+                {
+                    "id": "424",
+                    "name": "Gelato",
+                    "description": "Italian-style ice cream available in various flavors.",
+                    "price": 5.0
+                },
+                {
+                    "id": "425",
+                    "name": "Espresso",
+                    "description": "Strong Italian coffee.",
+                    "price": 3.0
+                },
+                {
+                    "id": "426",
+                    "name": "Cappuccino",
+                    "description": "Espresso with steamed milk and foam.",
+                    "price": 4.0
+                },
+                {
+                    "id": "427",
+                    "name": "Limoncello",
+                    "description": "Italian lemon liqueur.",
+                    "price": 5.0
+                },
+                {
+                    "id": "428",
+                    "name": "Red Wine",
+                    "description": "Assorted red wines by the glass.",
+                    "price": 7.0
+                },
+                {
+                    "id": "429",
+                    "name": "White Wine",
+                    "description": "Assorted white wines by the glass.",
+                    "price": 7.0
+                },
+                {
+                    "id": "430",
+                    "name": "Soft Drink",
+                    "description": "Assorted soft drinks.",
+                    "price": 2.5
+                }
+            ]
         },
         {
-          "id": "105",
-          "name": "Gnocchi al Pesto",
-          "description": "Potato dumplings in a fresh basil pesto sauce.",
-          "price": 13.00
-        },
-        {
-          "id": "106",
-          "name": "Ravioli di Ricotta",
-          "description": "Ricotta cheese-filled ravioli with a tomato basil sauce.",
-          "price": 14.50
-        },
-        {
-          "id": "107",
-          "name": "Tagliatelle Bolognese",
-          "description": "Tagliatelle pasta with a rich and savory meat sauce.",
-          "price": 15.00
-        },
-        {
-          "id": "108",
-          "name": "Tortellini Alfredo",
-          "description": "Cheese-filled tortellini in a creamy Alfredo sauce.",
-          "price": 14.50
-        },
-        {
-          "id": "109",
-          "name": "Pappardelle al Funghi",
-          "description": "Pappardelle pasta with a wild mushroom sauce.",
-          "price": 15.50
-        },
-        {
-          "id": "110",
-          "name": "Risotto alla Milanese",
-          "description": "Creamy saffron risotto.",
-          "price": 16.00
-        },
-        {
-          "id": "111",
-          "name": "Farfalle al Salmone",
-          "description": "Bow-tie pasta with smoked salmon in a cream sauce.",
-          "price": 16.50
-        },
-        {
-          "id": "112",
-          "name": "Rigatoni alla Norma",
-          "description": "Rigatoni pasta with eggplant, tomato, and ricotta salata.",
-          "price": 14.00
-        },
-        {
-          "id": "113",
-          "name": "Linguine alle Vongole",
-          "description": "Linguine pasta with fresh clams in a white wine sauce.",
-          "price": 17.00
-        },
-        {
-          "id": "114",
-          "name": "Cacio e Pepe",
-          "description": "Spaghetti with Pecorino Romano cheese and black pepper.",
-          "price": 12.00
-        },
-        {
-          "id": "115",
-          "name": "Calamari Fritti",
-          "description": "Fried calamari served with marinara sauce.",
-          "price": 11.50
-        },
-        {
-          "id": "116",
-          "name": "Bruschetta al Pomodoro",
-          "description": "Grilled bread topped with fresh tomatoes, garlic, and basil.",
-          "price": 9.00
-        },
-        {
-          "id": "117",
-          "name": "Caprese Salad",
-          "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
-          "price": 10.00
-        },
-        {
-          "id": "118",
-          "name": "Insalata Caesar",
-          "description": "Romaine lettuce, croutons, and Parmesan cheese with Caesar dressing.",
-          "price": 10.50
-        },
-        {
-          "id": "119",
-          "name": "Minestrone Soup",
-          "description": "Traditional Italian vegetable soup.",
-          "price": 8.00
-        },
-        {
-          "id": "120",
-          "name": "Zuppa Toscana",
-          "description": "Tuscan soup with potatoes, kale, and Italian sausage.",
-          "price": 9.50
-        },
-        {
-          "id": "121",
-          "name": "Prosciutto e Melone",
-          "description": "Prosciutto ham with fresh melon.",
-          "price": 12.00
-        },
-        {
-          "id": "122",
-          "name": "Arancini",
-          "description": "Fried risotto balls stuffed with cheese.",
-          "price": 10.00
-        },
-        {
-          "id": "123",
-          "name": "Polenta Fries",
-          "description": "Crispy fried polenta sticks served with marinara.",
-          "price": 8.50
-        },
-        {
-          "id": "124",
-          "name": "Parmigiana di Melanzane",
-          "description": "Baked eggplant with tomato sauce and mozzarella.",
-          "price": 13.50
-        },
-        {
-          "id": "125",
-          "name": "Osso Buco",
-          "description": "Braised veal shanks served with gremolata.",
-          "price": 22.00
-        },
-        {
-          "id": "126",
-          "name": "Saltimbocca alla Romana",
-          "description": "Veal topped with prosciutto and sage in a white wine sauce.",
-          "price": 20.00
-        },
-        {
-          "id": "127",
-          "name": "Tiramisu",
-          "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
-          "price": 7.50
-        },
-        {
-          "id": "128",
-          "name": "Panna Cotta",
-          "description": "Creamy Italian custard served with berry sauce.",
-          "price": 8.00
-        },
-        {
-          "id": "129",
-          "name": "Cannoli",
-          "description": "Crispy pastry shells filled with sweet ricotta cheese.",
-          "price": 6.50
-        },
-        {
-          "id": "130",
-          "name": "Gelato",
-          "description": "Italian-style ice cream available in various flavors.",
-          "price": 5.00
+            "name": "Taco Town",
+            "id": "5",
+            "address": "321 Taco Ave, Mexico City, Mexico",
+            "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-taco-restaurant.jpeg",
+            "products": [
+                {
+                    "id": "501",
+                    "name": "Carne Asada Taco",
+                    "description": "Grilled steak taco with onions, cilantro, and salsa.",
+                    "price": 3.0
+                },
+                {
+                    "id": "502",
+                    "name": "Al Pastor Taco",
+                    "description": "Marinated pork taco with pineapple, onions, and cilantro.",
+                    "price": 3.0
+                },
+                {
+                    "id": "503",
+                    "name": "Carnitas Taco",
+                    "description": "Slow-cooked pork taco with onions, cilantro, and salsa verde.",
+                    "price": 3.0
+                },
+                {
+                    "id": "504",
+                    "name": "Fish Taco",
+                    "description": "Grilled fish taco with cabbage slaw and chipotle mayo.",
+                    "price": 4.0
+                },
+                {
+                    "id": "505",
+                    "name": "Shrimp Taco",
+                    "description": "Grilled shrimp taco with avocado, lettuce, and spicy mayo.",
+                    "price": 4.5
+                },
+                {
+                    "id": "506",
+                    "name": "Chicken Tinga Taco",
+                    "description": "Shredded chicken in a smoky tomato sauce with onions and cilantro.",
+                    "price": 3.5
+                },
+                {
+                    "id": "507",
+                    "name": "Veggie Taco",
+                    "description": "Grilled vegetables with black beans, corn, and salsa.",
+                    "price": 2.5
+                },
+                {
+                    "id": "508",
+                    "name": "Barbacoa Taco",
+                    "description": "Slow-cooked beef taco with onions, cilantro, and salsa roja.",
+                    "price": 3.5
+                },
+                {
+                    "id": "509",
+                    "name": "Chorizo Taco",
+                    "description": "Spicy Mexican sausage with onions, cilantro, and salsa.",
+                    "price": 3.0
+                },
+                {
+                    "id": "510",
+                    "name": "Birria Taco",
+                    "description": "Slow-cooked beef with onions, cilantro, and consommé for dipping.",
+                    "price": 4.0
+                },
+                {
+                    "id": "511",
+                    "name": "Quesadilla",
+                    "description": "Grilled tortilla filled with melted cheese and your choice of meat.",
+                    "price": 6.0
+                },
+                {
+                    "id": "512",
+                    "name": "Nachos",
+                    "description": "Tortilla chips topped with cheese, jalapeños, sour cream, and salsa.",
+                    "price": 7.0
+                },
+                {
+                    "id": "513",
+                    "name": "Guacamole",
+                    "description": "Fresh avocado dip served with tortilla chips.",
+                    "price": 5.0
+                },
+                {
+                    "id": "514",
+                    "name": "Elote",
+                    "description": "Grilled corn on the cob with mayo, cheese, and chili powder.",
+                    "price": 4.0
+                },
+                {
+                    "id": "515",
+                    "name": "Churros",
+                    "description": "Fried dough pastry rolled in cinnamon sugar.",
+                    "price": 3.5
+                },
+                {
+                    "id": "516",
+                    "name": "Flan",
+                    "description": "Creamy caramel custard dessert.",
+                    "price": 4.0
+                },
+                {
+                    "id": "517",
+                    "name": "Horchata",
+                    "description": "Sweet rice milk drink with a hint of cinnamon.",
+                    "price": 2.5
+                },
+                {
+                    "id": "518",
+                    "name": "Margarita",
+                    "description": "Classic tequila cocktail with lime juice and triple sec.",
+                    "price": 6.0
+                },
+                {
+                    "id": "519",
+                    "name": "Mexican Beer",
+                    "description": "Assorted Mexican beers.",
+                    "price": 4.0
+                },
+                {
+                    "id": "520",
+                    "name": "Soft Drink",
+                    "description": "Assorted soft drinks.",
+                    "price": 2.0
+                }
+            ]
         }
-      ]
-    },
-    {
-      "name": "Sushi World",
-      "id": "2",
-      "address": "456 Sushi Blvd, Tokyo, Japan",
-      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-sushi-restaurant.jpeg",
-      "products": [
-        {
-          "id": "201",
-          "name": "California Roll",
-          "description": "Sushi roll with crab, avocado, and cucumber.",
-          "price": 8.50
-        },
-        {
-          "id": "202",
-          "name": "Salmon Nigiri",
-          "description": "Fresh salmon on top of seasoned rice.",
-          "price": 10.00
-        },
-        {
-          "id": "203",
-          "name": "Tempura Roll",
-          "description": "Sushi roll with tempura shrimp, avocado, and spicy mayo.",
-          "price": 12.00
-        },
-        {
-          "id": "204",
-          "name": "Spicy Tuna Roll",
-          "description": "Sushi roll with spicy tuna, cucumber, and sesame seeds.",
-          "price": 9.50
-        },
-        {
-          "id": "205",
-          "name": "Eel Nigiri",
-          "description": "Grilled eel on top of seasoned rice.",
-          "price": 11.00
-        },
-        {
-          "id": "206",
-          "name": "Rainbow Roll",
-          "description": "Sushi roll with crab, avocado, and cucumber topped with assorted fish.",
-          "price": 14.00
-        },
-        {
-          "id": "207",
-          "name": "Dragon Roll",
-          "description": "Sushi roll with tempura shrimp, cucumber, and avocado topped with eel and avocado.",
-          "price": 15.00
-        },
-        {
-          "id": "208",
-          "name": "Philadelphia Roll",
-          "description": "Sushi roll with smoked salmon, cream cheese, and cucumber.",
-          "price": 10.50
-        },
-        {
-          "id": "209",
-          "name": "Yellowtail Sashimi",
-          "description": "Thinly sliced yellowtail served with ponzu sauce.",
-          "price": 13.00
-        },
-        {
-          "id": "210",
-          "name": "Shrimp Tempura",
-          "description": "Crispy fried shrimp served with tempura sauce.",
-          "price": 8.50
-        },
-        {
-          "id": "211",
-          "name": "Miso Soup",
-          "description": "Traditional Japanese soup with tofu, seaweed, and green onions.",
-          "price": 3.50
-        },
-        {
-          "id": "212",
-          "name": "Edamame",
-          "description": "Steamed and salted young soybeans.",
-          "price": 4.00
-        },
-        {
-          "id": "213",
-          "name": "Seaweed Salad",
-          "description": "Marinated seaweed with sesame seeds.",
-          "price": 5.00
-        },
-        {
-          "id": "214",
-          "name": "Gyoza",
-          "description": "Pan-fried Japanese dumplings filled with pork and vegetables.",
-          "price": 6.50
-        },
-        {
-          "id": "215",
-          "name": "Agedashi Tofu",
-          "description": "Deep-fried tofu in a dashi broth.",
-          "price": 6.00
-        },
-        {
-          "id": "216",
-          "name": "Tonkatsu",
-          "description": "Breaded and deep-fried pork cutlet served with tonkatsu sauce.",
-          "price": 11.50
-        },
-        {
-          "id": "217",
-          "name": "Chicken Katsu",
-          "description": "Breaded and deep-fried chicken cutlet served with tonkatsu sauce.",
-          "price": 10.50
-        },
-        {
-          "id": "218",
-          "name": "Katsu Don",
-          "description": "Breaded pork cutlet served over rice with egg and onions.",
-          "price": 12.00
-        },
-        {
-          "id": "219",
-          "name": "Unagi Don",
-          "description": "Grilled eel served over a bed of rice.",
-          "price": 16.00
-        },
-        {
-          "id": "220",
-          "name": "Sake",
-          "description": "Traditional Japanese rice wine.",
-          "price": 7.00
-        },
-        {
-          "id": "221",
-          "name": "Matcha Ice Cream",
-          "description": "Green tea-flavored ice cream.",
-          "price": 4.00
-        },
-        {
-          "id": "222",
-          "name": "Mochi Ice Cream",
-          "description": "Sweet rice cake filled with ice cream.",
-          "price": 5.00
-        },
-        {
-          "id": "223",
-          "name": "Green Tea",
-          "description": "Traditional Japanese green tea.",
-          "price": 3.00
-        },
-        {
-          "id": "224",
-          "name": "Hamachi Kama",
-          "description": "Grilled yellowtail collar served with ponzu sauce.",
-          "price": 10.00
-        },
-        {
-          "id": "225",
-          "name": "Takoyaki",
-          "description": "Fried octopus balls drizzled with takoyaki sauce and mayo.",
-          "price": 7.50
-        },
-        {
-          "id": "226",
-          "name": "Ikura Sushi",
-          "description": "Salmon roe on top of seasoned rice.",
-          "price": 12.00
-        },
-        {
-          "id": "227",
-          "name": "Chirashi Bowl",
-          "description": "Assorted sashimi served over a bowl of sushi rice.",
-          "price": 18.50
-        },
-        {
-          "id": "228",
-          "name": "Soba Noodles",
-          "description": "Buckwheat noodles served in a hot or cold broth.",
-          "price": 9.00
-        },
-        {
-          "id": "229",
-          "name": "Udon Noodles",
-          "description": "Thick wheat noodles served in a hot broth.",
-          "price": 10.00
-        },
-        {
-          "id": "230",
-          "name": "Tamago Sushi",
-          "description": "Sweet Japanese omelette on top of seasoned rice.",
-          "price": 5.50
-        }
-      ]
-    },
-    {
-      "name": "Burger Haven",
-      "id": "3",
-      "address": "789 Burger Lane, New York, USA",
-      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-burger-restaurant.jpeg",
-      "products": [
-        {
-          "id": "301",
-          "name": "Classic Cheeseburger",
-          "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and pickles.",
-          "price": 11.00
-        },
-        {
-          "id": "302",
-          "name": "Bacon Burger",
-          "description": "Beef patty topped with crispy bacon, cheddar cheese, and BBQ sauce.",
-          "price": 13.00
-        },
-        {
-          "id": "303",
-          "name": "Veggie Burger",
-          "description": "Grilled veggie patty with lettuce, tomato, and avocado.",
-          "price": 10.00
-        },
-        {
-          "id": "304",
-          "name": "Mushroom Swiss Burger",
-          "description": "Beef patty topped with sautéed mushrooms and Swiss cheese.",
-          "price": 12.00
-        },
-        {
-          "id": "305",
-          "name": "BBQ Chicken Sandwich",
-          "description": "Grilled chicken breast with BBQ sauce, lettuce, and tomato.",
-          "price": 11.50
-        },
-        {
-          "id": "306",
-          "name": "Buffalo Chicken Sandwich",
-          "description": "Fried chicken breast tossed in buffalo sauce with lettuce and ranch.",
-          "price": 12.50
-        },
-        {
-          "id": "307",
-          "name": "Turkey Burger",
-          "description": "Lean turkey patty with lettuce, tomato, and avocado.",
-          "price": 10.50
-        },
-        {
-          "id": "308",
-          "name": "Double Cheeseburger",
-          "description": "Two beef patties with double cheddar cheese, lettuce, and tomato.",
-          "price": 15.00
-        },
-        {
-          "id": "309",
-          "name": "Avocado Bacon Burger",
-          "description": "Beef patty topped with avocado, crispy bacon, and cheddar cheese.",
-          "price": 14.00
-        },
-        {
-          "id": "310",
-          "name": "Jalapeño Burger",
-          "description": "Beef patty with spicy jalapeños, pepper jack cheese, and chipotle mayo.",
-          "price": 12.50
-        },
-        {
-          "id": "311",
-          "name": "Onion Ring Burger",
-          "description": "Beef patty topped with crispy onion rings, BBQ sauce, and cheddar cheese.",
-          "price": 13.50
-        },
-        {
-          "id": "312",
-          "name": "Pulled Pork Sandwich",
-          "description": "Slow-cooked pulled pork with BBQ sauce and coleslaw on a bun.",
-          "price": 11.50
-        },
-        {
-          "id": "313",
-          "name": "Philly Cheesesteak",
-          "description": "Sliced steak with sautéed onions, peppers, and melted cheese on a hoagie roll.",
-          "price": 14.00
-        },
-        {
-          "id": "314",
-          "name": "Chicken Caesar Wrap",
-          "description": "Grilled chicken, romaine lettuce, Parmesan cheese, and Caesar dressing in a wrap.",
-          "price": 10.00
-        },
-        {
-          "id": "315",
-          "name": "Fish Tacos",
-          "description": "Grilled fish with cabbage slaw, pico de gallo, and chipotle mayo in corn tortillas.",
-          "price": 12.00
-        },
-        {
-          "id": "316",
-          "name": "BLT Sandwich",
-          "description": "Bacon, lettuce, and tomato with mayo on toasted bread.",
-          "price": 9.50
-        },
-        {
-          "id": "317",
-          "name": "Grilled Cheese Sandwich",
-          "description": "Melted cheddar cheese on toasted bread.",
-          "price": 7.00
-        },
-        {
-          "id": "318",
-          "name": "Chili Cheese Fries",
-          "description": "Crispy fries topped with chili and melted cheese.",
-          "price": 8.00
-        },
-        {
-          "id": "319",
-          "name": "Sweet Potato Fries",
-          "description": "Crispy sweet potato fries served with a side of ranch.",
-          "price": 6.00
-        },
-        {
-          "id": "320",
-          "name": "Mozzarella Sticks",
-          "description": "Fried mozzarella sticks served with marinara sauce.",
-          "price": 7.50
-        },
-        {
-          "id": "321",
-          "name": "Buffalo Wings",
-          "description": "Spicy buffalo wings served with celery and blue cheese dressing.",
-          "price": 10.00
-        },
-        {
-          "id": "322",
-          "name": "Nachos",
-          "description": "Tortilla chips topped with cheese, jalapeños, sour cream, and salsa.",
-          "price": 9.00
-        },
-        {
-          "id": "323",
-          "name": "House Salad",
-          "description": "Mixed greens with tomatoes, cucumbers, and carrots with your choice of dressing.",
-          "price": 7.50
-        },
-        {
-          "id": "324",
-          "name": "Caesar Salad",
-          "description": "Romaine lettuce with Parmesan cheese, croutons, and Caesar dressing.",
-          "price": 8.00
-        },
-        {
-          "id": "325",
-          "name": "Coleslaw",
-          "description": "Creamy coleslaw made with cabbage and carrots.",
-          "price": 4.00
-        },
-        {
-          "id": "326",
-          "name": "Mac and Cheese",
-          "description": "Creamy macaroni and cheese with a crispy breadcrumb topping.",
-          "price": 6.50
-        },
-        {
-          "id": "327",
-          "name": "Apple Pie",
-          "description": "Classic apple pie served with vanilla ice cream.",
-          "price": 5.00
-        },
-        {
-          "id": "328",
-          "name": "Chocolate Cake",
-          "description": "Rich chocolate cake with a chocolate ganache topping.",
-          "price": 6.00
-        },
-        {
-          "id": "329",
-          "name": "Milkshake",
-          "description": "Thick and creamy milkshake available in vanilla, chocolate, and strawberry.",
-          "price": 5.00
-        },
-        {
-          "id": "330",
-          "name": "Soft Drink",
-          "description": "Assorted soft drinks.",
-          "price": 2.50
-        }
-      ]
-    },
-    {
-      "name": "Pizza Parlor",
-      "id": "4",
-      "address": "123 Pizza Road, Naples, Italy",
-      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-pizza-restaurant.jpeg",
-      "products": [
-        {
-          "id": "401",
-          "name": "Margherita Pizza",
-          "description": "Classic pizza with tomato sauce, mozzarella, and basil.",
-          "price": 10.00
-        },
-        {
-          "id": "402",
-          "name": "Pepperoni Pizza",
-          "description": "Pizza topped with pepperoni slices and mozzarella cheese.",
-          "price": 12.00
-        },
-        {
-          "id": "403",
-          "name": "BBQ Chicken Pizza",
-          "description": "Pizza topped with BBQ chicken, red onions, and cilantro.",
-          "price": 13.50
-        },
-        {
-          "id": "404",
-          "name": "Hawaiian Pizza",
-          "description": "Pizza with ham, pineapple, and mozzarella cheese.",
-          "price": 11.50
-        },
-        {
-          "id": "405",
-          "name": "Veggie Pizza",
-          "description": "Pizza topped with bell peppers, onions, mushrooms, and olives.",
-          "price": 12.00
-        },
-        {
-          "id": "406",
-          "name": "Four Cheese Pizza",
-          "description": "Pizza with mozzarella, cheddar, Parmesan, and blue cheese.",
-          "price": 14.00
-        },
-        {
-          "id": "407",
-          "name": "Meat Lovers Pizza",
-          "description": "Pizza topped with pepperoni, sausage, ham, and bacon.",
-          "price": 15.00
-        },
-        {
-          "id": "408",
-          "name": "White Pizza",
-          "description": "Pizza with ricotta, mozzarella, and Parmesan cheese.",
-          "price": 13.00
-        },
-        {
-          "id": "409",
-          "name": "Spinach and Feta Pizza",
-          "description": "Pizza topped with spinach, feta cheese, and garlic.",
-          "price": 13.50
-        },
-        {
-          "id": "410",
-          "name": "Buffalo Chicken Pizza",
-          "description": "Pizza with buffalo chicken, mozzarella, and blue cheese dressing.",
-          "price": 14.00
-        },
-        {
-          "id": "411",
-          "name": "Marinara Pizza",
-          "description": "Pizza with tomato sauce, garlic, oregano, and olive oil.",
-          "price": 9.00
-        },
-        {
-          "id": "412",
-          "name": "Capricciosa Pizza",
-          "description": "Pizza with ham, mushrooms, artichokes, and olives.",
-          "price": 14.00
-        },
-        {
-          "id": "413",
-          "name": "Quattro Stagioni Pizza",
-          "description": "Pizza divided into four sections with different toppings.",
-          "price": 15.00
-        },
-        {
-          "id": "414",
-          "name": "Calzone",
-          "description": "Folded pizza filled with ricotta, mozzarella, and ham.",
-          "price": 12.50
-        },
-        {
-          "id": "415",
-          "name": "Stromboli",
-          "description": "Rolled pizza with mozzarella, pepperoni, and ham.",
-          "price": 13.00
-        },
-        {
-          "id": "416",
-          "name": "Garlic Knots",
-          "description": "Knotted bread topped with garlic and Parmesan cheese.",
-          "price": 6.00
-        },
-        {
-          "id": "417",
-          "name": "Mozzarella Sticks",
-          "description": "Fried mozzarella sticks served with marinara sauce.",
-          "price": 7.50
-        },
-        {
-          "id": "418",
-          "name": "Caesar Salad",
-          "description": "Romaine lettuce with Parmesan cheese, croutons, and Caesar dressing.",
-          "price": 8.00
-        },
-        {
-          "id": "419",
-          "name": "Antipasto Salad",
-          "description": "Mixed greens with Italian meats, cheese, and olives.",
-          "price": 9.50
-        },
-        {
-          "id": "420",
-          "name": "Caprese Salad",
-          "description": "Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.",
-          "price": 10.00
-        },
-        {
-          "id": "421",
-          "name": "Tiramisu",
-          "description": "Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.",
-          "price": 7.50
-        },
-        {
-          "id": "422",
-          "name": "Panna Cotta",
-          "description": "Creamy Italian custard served with berry sauce.",
-          "price": 8.00
-        },
-        {
-          "id": "423",
-          "name": "Cannoli",
-          "description": "Crispy pastry shells filled with sweet ricotta cheese.",
-          "price": 6.50
-        },
-        {
-          "id": "424",
-          "name": "Gelato",
-          "description": "Italian-style ice cream available in various flavors.",
-          "price": 5.00
-        },
-        {
-          "id": "425",
-          "name": "Espresso",
-          "description": "Strong Italian coffee.",
-          "price": 3.00
-        },
-        {
-          "id": "426",
-          "name": "Cappuccino",
-          "description": "Espresso with steamed milk and foam.",
-          "price": 4.00
-        },
-        {
-          "id": "427",
-          "name": "Limoncello",
-          "description": "Italian lemon liqueur.",
-          "price": 5.00
-        },
-        {
-          "id": "428",
-          "name": "Red Wine",
-          "description": "Assorted red wines by the glass.",
-          "price": 7.00
-        },
-        {
-          "id": "429",
-          "name": "White Wine",
-          "description": "Assorted white wines by the glass.",
-          "price": 7.00
-        },
-        {
-          "id": "430",
-          "name": "Soft Drink",
-          "description": "Assorted soft drinks.",
-          "price": 2.50
-        }
-      ]
-    },
-    {
-      "name": "Taco Town",
-      "id": "5",
-      "address": "321 Taco Ave, Mexico City, Mexico",
-      "image": "https://wakeuplabs-challenge.s3.amazonaws.com/wakeup-challenge-taco-restaurant.jpeg",
-      "products": [
-        {
-          "id": "501",
-          "name": "Carne Asada Taco",
-          "description": "Grilled steak taco with onions, cilantro, and salsa.",
-          "price": 3.00
-        },
-        {
-          "id": "502",
-          "name": "Al Pastor Taco",
-          "description": "Marinated pork taco with pineapple, onions, and cilantro.",
-          "price": 3.00
-        },
-        {
-          "id": "503",
-          "name": "Carnitas Taco",
-          "description": "Slow-cooked pork taco with onions, cilantro, and salsa verde.",
-          "price": 3.00
-        },
-        {
-          "id": "504",
-          "name": "Fish Taco",
-          "description": "Grilled fish taco with cabbage slaw and chipotle mayo.",
-          "price": 4.00
-        },
-        {
-          "id": "505",
-          "name": "Shrimp Taco",
-          "description": "Grilled shrimp taco with avocado, lettuce, and spicy mayo.",
-          "price": 4.50
-        },
-        {
-          "id": "506",
-          "name": "Chicken Tinga Taco",
-          "description": "Shredded chicken in a smoky tomato sauce with onions and cilantro.",
-          "price": 3.50
-        },
-        {
-          "id": "507",
-          "name": "Veggie Taco",
-          "description": "Grilled vegetables with black beans, corn, and salsa.",
-          "price": 2.50
-        },
-        {
-          "id": "508",
-          "name": "Barbacoa Taco",
-          "description": "Slow-cooked beef taco with onions, cilantro, and salsa roja.",
-          "price": 3.50
-        },
-        {
-          "id": "509",
-          "name": "Chorizo Taco",
-          "description": "Spicy Mexican sausage with onions, cilantro, and salsa.",
-          "price": 3.00
-        },
-        {
-          "id": "510",
-          "name": "Birria Taco",
-          "description": "Slow-cooked beef with onions, cilantro, and consommé for dipping.",
-          "price": 4.00
-        },
-        {
-          "id": "511",
-          "name": "Quesadilla",
-          "description": "Grilled tortilla filled with melted cheese and your choice of meat.",
-          "price": 6.00
-        },
-        {
-          "id": "512",
-          "name": "Nachos",
-          "description": "Tortilla chips topped with cheese, jalapeños, sour cream, and salsa.",
-          "price": 7.00
-        },
-        {
-          "id": "513",
-          "name": "Guacamole",
-          "description": "Fresh avocado dip served with tortilla chips.",
-          "price": 5.00
-        },
-        {
-          "id": "514",
-          "name": "Elote",
-          "description": "Grilled corn on the cob with mayo, cheese, and chili powder.",
-          "price": 4.00
-        },
-        {
-          "id": "515",
-          "name": "Churros",
-          "description": "Fried dough pastry rolled in cinnamon sugar.",
-          "price": 3.50
-        },
-        {
-          "id": "516",
-          "name": "Flan",
-          "description": "Creamy caramel custard dessert.",
-          "price": 4.00
-        },
-        {
-          "id": "517",
-          "name": "Horchata",
-          "description": "Sweet rice milk drink with a hint of cinnamon.",
-          "price": 2.50
-        },
-        {
-          "id": "518",
-          "name": "Margarita",
-          "description": "Classic tequila cocktail with lime juice and triple sec.",
-          "price": 6.00
-        },
-        {
-          "id": "519",
-          "name": "Mexican Beer",
-          "description": "Assorted Mexican beers.",
-          "price": 4.00
-        },
-        {
-          "id": "520",
-          "name": "Soft Drink",
-          "description": "Assorted soft drinks.",
-          "price": 2.00
-        }
-      ]
-    }
-  ]
+    ]
 }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Test, TestingModule } from '@nestjs/testing';
 import { RestaurantsService } from './restaurants.service';
 import { Restaurant } from 'restaurant-types';
@@ -17,8 +18,8 @@ const restaurantDataMock = new Map<string, RestaurantDto>(
         {
             ...restaurant,
             products: Array.from({ length: 5 }, (_, i) => ({
-                id: `${restaurant.id}1`,
-                name: `Product ${restaurant.id}1`,
+                id: `${restaurant.id}${i}`,
+                name: `Product ${restaurant.id}${i}`,
                 price: 1,
             })),
         },

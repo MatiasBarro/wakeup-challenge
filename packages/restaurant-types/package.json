@@ -1,18 +1,20 @@
 {
-  "name": "restaurant-types",
-  "version": "1.0.0",
-  "description": "Restaurant Types for WakeLab Challenge",
-  "main": "dist/index.js",
-  "files": ["dist/*"],
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsup"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.5"
-  }
+    "name": "restaurant-types",
+    "version": "1.0.0",
+    "description": "Restaurant Types for WakeLab Challenge",
+    "main": "dist/index.js",
+    "files": [
+        "dist/*"
+    ],
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsup"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.5"
+    }
 }
