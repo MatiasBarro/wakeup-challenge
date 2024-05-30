@@ -1,81 +1,73 @@
-# Turborepo starter
+# Wakeup Labs Technical Challenge
 
-This is an official starter Turborepo.
+This repository contains all the necessary resources for running a restaurant platform application to accomplish the Wakeup Labs Technical Challenge.
 
-## Using this example
+## Project Structure
 
-Run the following command:
+The project structure consists of a Mono Repository created using [Turborepo](https://turbo.build/repo) and using **npm workspaces**. This simplifies the development of both frontend and backend applications.
 
-```sh
-npx create-turbo@latest
+These are the subprojects created for this application:
+
+-   **apps/restaurant-app:** React Frontend application for restaurant management.
+-   **apps/restaurant-api:** NestJS Backend API used by frontend aplication for fetching restaurants and creating orders.
+-   **packages/restaurant-app-types:** Project that contains all types and DTOs shared between the frontend and backend applications.
+
+## Installation
+
+Both frontend and backend applications uses Node version **v20.11.1**. If you have [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md) installed in your computer run `nvm use` in the project's root to set the proper node version.
+
+-   Install all project dependecies by running the following command in the project's root.
+
+```bash
+  npm install
 ```
 
-## What's inside?
+-   Create a `.env` file in **apps/restaurant-api** using `.env.example` file as template. You can use the default `PORT=3000` variable as application port or any other you have available.
 
-This Turborepo includes the following packages/apps:
+-   Create a `.env.local` file in **apps/restaurant-app** using `.env.example` file as template. `VITE_RESTAURANT_API_URL` value must match backend application's url and port. By default frontend application will run in port 4000. If you need to change it override the port property of the server configuration in `vite.config.js`.
 
-### Apps and Packages
+-   Finally run the next command (in project' root) to start both the frontend and backend applications simultaneously.
 
--   `docs`: a [Next.js](https://nextjs.org/) app
--   `web`: another [Next.js](https://nextjs.org/) app
--   `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
--   `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
--   `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
--   [TypeScript](https://www.typescriptlang.org/) for static type checking
--   [ESLint](https://eslint.org/) for code linting
--   [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+```bash
+  npm run dev
 ```
 
-### Develop
+Frontend application will available on http://localhost:4000 and backend application on http://localhost:3000 (or the ports you've chosen)
 
-To develop all apps and packages, run the following command:
+## Libraries
 
-```
-cd my-turborepo
-pnpm dev
-```
+#### Common
 
-### Remote Caching
+-   [ESlint](https://eslint.org/)
+-   [Prettier](https://prettier.io/)
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+#### Frontend
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+-   [React](https://react.dev)
+-   [Vite](https://vitejs.dev)
+-   [Tastack Router](https://tanstack.com/router): For handling application Router
+-   [Zustand](https://zustand-demo.pmnd.rs/): For handling application state
+-   [Axios](https://axios-http.com/): For backend requests
+-   [shadcn/ui](https://ui.shadcn.com/): UI Components library
+-   [TailwindCSS](https://tailwindcss.com/): For application styling.
 
-```
-cd my-turborepo
-npx turbo login
-```
+### Backend
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+-   [NestJS](https://nestjs.com/): Backend API framework
+-   [Jest](https://jestjs.io/): Unit testing
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Production Urls
 
-```
-npx turbo link
-```
+#### Frontend
 
-## Useful Links
+https://wakeup-challenge-restaurant-app.vercel.app
 
-Learn more about the power of Turborepo:
+#### Backend
 
--   [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
--   [Caching](https://turbo.build/repo/docs/core-concepts/caching)
--   [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
--   [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
--   [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
--   [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+https://wakeup-challenge-production.up.railway.app/swagger
+
+## Author
+
+Matias Barro Beotegui
+
+matias.barro@gmail.com - [LinkedIn](https://www.linkedin.com/in/matiasbarro)
