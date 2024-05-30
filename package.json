@@ -12,7 +12,7 @@
     "build:restaurant-api": "turbo build --filter=restaurant-api",
     "dev:restaurant-app": "turbo dev --filter=restaurant-app",
     "test:restaurant-app": "turbo test --filter=restaurant-app",
-    "build:restaurant-app": "turbo build --filter=restaurant-api"
+    "build:restaurant-app": "turbo build --filter=restaurant-app"
 
   },
   "devDependencies": {
