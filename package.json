@@ -9,8 +9,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "dev:restaurant-api": "turbo dev --filter=restaurant-api",
     "test:restaurant-api": "turbo test --filter=restaurant-api",
+    "build:restaurant-api": "turbo build --filter=restaurant-api",
     "dev:restaurant-app": "turbo dev --filter=restaurant-app",
-    "test:restaurant-app": "turbo test --filter=restaurant-app"
+    "test:restaurant-app": "turbo test --filter=restaurant-app",
+    "build:restaurant-app": "turbo build --filter=restaurant-api"
+
   },
   "devDependencies": {
     "prettier": "^3.2.5",
